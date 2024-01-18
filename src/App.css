@@ -70,22 +70,8 @@ nav {
 }
 
 
-
-
-
-
-.container {
-    max-width: 100rem;
-    margin: auto auto;
-    margin-top: 5rem;
-}
-
-
-
-
-
 .hero {
-    height: calc(100vh - 5rem);
+    height: clamp(64rem, calc(100vh - 5rem), 70rem);
     display: flex;
     flex-direction: column;
 }
@@ -106,7 +92,6 @@ nav {
 }
 
 .hero__title {
-    /* color: var(--highlight-color); */
     font-size: 1.5rem;
     font-weight: 400;
     padding-bottom: 2rem;
@@ -118,6 +103,7 @@ nav {
     font-size: 1.5rem;
     padding: 1rem;
 }
+
 
 .cta {
     display: flex;
@@ -151,10 +137,6 @@ nav {
 }
 
 
-
-
-
-
 .hero__stack {
     /* background-color: #a5f5; */
     flex-basis: 100%;
@@ -164,7 +146,6 @@ nav {
 }
 
 .hero__stack>div {
-    /* background-color: #fa05; */
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -194,6 +175,45 @@ nav {
 
 
 
+.about {
+    background-color: var(--background-color-2);
+}
+
+.about>.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+}
+
+.about .shrink-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about .shrink-wrapper img {
+    max-width: min(100vw, 25rem);
+    max-height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.about__about-me {
+    font-weight: 700;
+    color: var(--highlight-color);
+    line-height: 4rem;
+}
+
+.about__title {
+    margin: 0;
+}
+
+.about__content {
+    font-size: 1.1rem;
+}
+
 
 
 
@@ -214,7 +234,6 @@ nav {
 
 
 
-
     .hero__intro {
         flex-direction: row;
         align-items: end;
@@ -223,5 +242,4 @@ nav {
     .hero__info {
         margin: 0 3rem;
     }
-
 }

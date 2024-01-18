@@ -3,6 +3,7 @@
 :root {
   --foreground-color: black;
   --background-color: white;
+  --background-color-2: #f6f6f6;
   --secondary-color: #828282;
   --highlight-color: #00adff;
 
@@ -19,6 +20,7 @@
 :root.darkmode {
   --foreground-color: white;
   --background-color: #0f161e;
+  --background-color-2: #0e141b;
   --highlight-color: #00adff;
 }
 
@@ -32,6 +34,36 @@
 body {
   margin: 0;
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5rem
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: var(--secondary-color);
+}
+
+
+.container {
+  margin-top: 5rem;
+}
+
+.wrapper {
+  max-width: 100rem;
+  margin: auto auto;
+}
+
+.shrink-wrapper {
+  /* background-color: #00adff55; */
+}
+
+
 
 a {
   text-decoration: inherit;

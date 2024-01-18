@@ -7,6 +7,7 @@ import {
   SiPython,
   SiUnity,
 } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
 export const Hero = () => {
   return (
     <section className="hero">
@@ -33,7 +34,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="hero__stack">
-        <div>
+        <div className="shrink-wrapper">
           <span>
             <SiHtml5 /> HTML
           </span>
@@ -51,6 +52,9 @@ export const Hero = () => {
           </span>
           <span>
             <SiPython /> Python
+          </span>
+          <span>
+            <TbBrandThreejs /> Three.Js
           </span>
           <span>
             <SiUnity /> Unity
