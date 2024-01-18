@@ -15,12 +15,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 :root.darkmode {
   --foreground-color: white;
   --background-color: #0f161e;
-  --background-color-2: #0e141b;
+  --background-color-2: #0d131a;
   --highlight-color: #00adff;
 }
 
@@ -55,15 +56,22 @@ body {
 }
 
 .wrapper {
-  max-width: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 70rem;
   margin: auto auto;
+  padding: 2rem 0;
 }
 
 .shrink-wrapper {
   /* background-color: #00adff55; */
 }
 
-
+p {
+  font-size: 1.2rem;
+}
 
 a {
   text-decoration: inherit;

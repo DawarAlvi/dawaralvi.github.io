@@ -10,7 +10,7 @@ import {
 import { TbBrandThreejs } from "react-icons/tb";
 export const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero__intro">
         <div className="hero__info">
           <div className="hero__name">Dawar Alvi</div>

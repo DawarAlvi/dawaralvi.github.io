@@ -167,7 +167,7 @@ nav {
     min-height: 8rem;
     border-radius: 1rem;
     border: 2px solid var(--foreground-color);
-    border-bottom: 4px solid var(--foreground-color);
+    border-bottom-width: 4px;
 }
 
 .hero__stack>div>span>svg {
@@ -182,12 +182,6 @@ nav {
     background-color: var(--background-color-2);
 }
 
-.about>.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem;
-}
 
 .about .shrink-wrapper {
     display: flex;
@@ -205,6 +199,14 @@ nav {
     border-radius: 1rem;
 }
 
+.about .shrink-wrapper>div {
+    margin: 0 1rem;
+}
+
+.about .section-title {
+    text-align: center;
+}
+
 .section-title {
     font-weight: 700;
     color: var(--highlight-color);
@@ -217,9 +219,6 @@ nav {
     font-size: 2rem;
 }
 
-.about__content {
-    font-size: 1.2rem;
-}
 
 
 
@@ -272,5 +271,14 @@ nav {
     .about .shrink-wrapper img {
         min-width: 25rem;
         margin-right: 5rem;
+    }
+
+    .about .section-title {
+        text-align: left;
+    }
+
+
+    .projects .section-title {
+        align-self: flex-start;
     }
 }

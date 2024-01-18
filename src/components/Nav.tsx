@@ -36,7 +36,7 @@ export const Nav = () => {
         <div style={{ display: "flex" }}>
           <ul className="nav-links">
             <li>
-              <a href="/">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <a href="#about">About</a>
@@ -79,7 +79,7 @@ export const Nav = () => {
         </button>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
             <a href="#about">About</a>

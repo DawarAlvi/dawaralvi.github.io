@@ -2,7 +2,7 @@ import aboutImg from "../assets/img/about-img.png";
 
 export const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="wrapper">
         <div className="shrink-wrapper">
           <img alt="crypto" src={aboutImg} />
