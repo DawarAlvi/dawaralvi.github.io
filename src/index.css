@@ -7,6 +7,7 @@
   --secondary-color: #828282;
   --highlight-color: #00adff;
 
+  --default-transition: 0.2s ease-in-out;
   color: var(--foreground-color);
   background-color: var(--background-color);
 
@@ -26,11 +27,11 @@
 }
 
 * {
+  transition: background-color var(--default-transition);
   box-sizing: border-box;
   min-width: 0;
-  transition: background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
 }
+
 
 body {
   margin: 0;
@@ -65,16 +66,13 @@ body {
   padding: 2rem 0;
 }
 
-.shrink-wrapper {
-  /* background-color: #00adff55; */
-}
-
 p {
   font-size: 1.2rem;
 }
 
 a {
   text-decoration: inherit;
+  transition: all var(--default-transition);
   color: var(--highlight-color);
 }
 

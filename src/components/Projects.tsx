@@ -106,8 +106,8 @@ export const Projects = () => {
               <h4 className="project__name">Hero AI Onboarding App</h4>
               <p>
                 AI Onboarding App presented at showrooms that estimated user's
-                age and gender based on an image. And suggested a bike based on
-                their preferences.
+                age and gender based on their image. And suggested a bike based
+                on their preferences.
               </p>
 
               <div className="tags">
