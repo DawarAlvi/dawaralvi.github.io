@@ -79,16 +79,44 @@ export const Nav = () => {
         </button>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a
+              href="#home"
+              onClick={() => {
+                toggleMobileNav(false);
+              }}
+            >
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a
+              href="#about"
+              onClick={() => {
+                toggleMobileNav(false);
+              }}
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a
+              href="#projects"
+              onClick={() => {
+                toggleMobileNav(false);
+              }}
+            >
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a
+              href="#contact"
+              onClick={() => {
+                toggleMobileNav(false);
+              }}
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>
