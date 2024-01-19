@@ -29,8 +29,8 @@ export const Hero = () => {
           </div>
         </div>
         <div className="hero__blurb">
-          Hi, I'm Dawar Alvi. A passionate Front-end Developer with expertise in
-          making interactive Web Apps and Realtime Graphics.
+          Hi, I'm Dawar Alvi. A passionate Developer with expertise in making
+          interactive Web Apps and Realtime Graphics.
         </div>
       </div>
       <div className="hero__stack">

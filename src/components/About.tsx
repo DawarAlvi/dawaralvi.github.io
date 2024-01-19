@@ -9,12 +9,11 @@ export const About = () => {
           <div>
             <h3 className="section-title">ABOUT ME</h3>
             <h2 className="about__title">
-              Front-end Developer with a knack for clean design
+              Developer with a knack for clean design
             </h2>
 
             <p className="about__content">
-              As a front-end developer I excel at creating seamless and
-              intuitive and user experiences.
+              I excel at creating seamless and intuitive user experiences.
             </p>
 
             <p className="about__content">
