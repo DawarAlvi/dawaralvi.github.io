@@ -222,13 +222,6 @@ nav {
 
 
 
-.projects {
-    /* background-color: beige; */
-}
-
-.projects .wrapper {
-    /* background-color: #59e5; */
-}
 
 .project {
     background-color: var(--background-color-2);
@@ -240,11 +233,34 @@ nav {
     align-items: center;
 }
 
-.project img {
-    max-width: min(calc(100vw - 2rem), 25rem);
-    border-radius: .75rem;
-    object-fit: cover;
+.project .carousel-root {
+    max-width: 30rem;
 }
+
+.carousel li {
+    display: flex;
+    justify-content: center;
+}
+
+.project .carousel {
+    border-radius: .75rem;
+}
+
+.project .carousel,
+.carousel .slider-wrapper,
+.carousel .slider,
+.carousel li div,
+.carousel img {
+    max-height: 20rem;
+}
+
+
+.project img {
+    border-radius: .75rem;
+    object-fit: contain;
+    height: 100%;
+}
+
 
 .project__info {
     margin: 1rem;
@@ -261,7 +277,7 @@ nav {
 
 .projects .tags>* {
     font-weight: 700;
-    margin-right: .5rem;
+    margin-right: 1rem;
 }
 
 .projects .links {
