@@ -56,7 +56,10 @@ export const Projects = () => {
                 <img src="./assets/img/projects/iijs-2.png" />
               </div>
               <div>
-                <img src="./assets/img/projects/iijs-3.jpg" />
+                <img src="./assets/img/projects/iijs-3.png" />
+              </div>
+              <div>
+                <img src="./assets/img/projects/iijs-4.png" />
               </div>
             </Carousel>
             <div className="project__info">
@@ -73,14 +76,7 @@ export const Projects = () => {
                 <span>Firebase</span>
                 <span>ThreeJs</span>
               </div>
-              <div className="links">
-                <a
-                  href="https://digitaljalebilabs.com/portfolio/gjepc-iijs-large-scale-virtual-exhibition/"
-                  target="_blank"
-                >
-                  View More <RxExternalLink />
-                </a>
-              </div>
+              <div className="links"></div>
             </div>
           </div>
 
@@ -106,8 +102,8 @@ export const Projects = () => {
               <h4 className="project__name">Hero AI Onboarding App</h4>
               <p>
                 AI Onboarding App presented at showrooms that estimated user's
-                age and gender based on their image. And suggested a bike based
-                on their preferences.
+                age and gender from their photo by utilizing an AI service. And
+                suggested a bike based on their preferences.
               </p>
 
               <div className="tags">
@@ -149,7 +145,6 @@ export const Projects = () => {
 
               <div className="tags">
                 <span>Unity</span>
-                <span>Oculus Quest</span>
                 <span>Socket.io</span>
                 <span>React</span>
               </div>
