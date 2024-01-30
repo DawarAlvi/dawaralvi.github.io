@@ -4,12 +4,12 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
-  SiUnity,
   SiNodedotjs,
-  SiMongodb,
   SiExpress,
+  SiMongodb,
+  SiPython,
+  SiUnity,
 } from "react-icons/si";
-import { TbBrandThreejs } from "react-icons/tb";
 export const Hero = () => {
   return (
     <section className="hero" id="home">
@@ -46,7 +46,7 @@ export const Hero = () => {
           <span><SiNodedotjs />Node</span>
           <span><SiExpress /> Express</span>
           <span><SiMongodb /> MongoDB</span>
-          <span><TbBrandThreejs /> Three.Js</span>
+          <span><SiPython /> Python</span>
           <span><SiUnity /> Unity</span>
         </div>
       </div>
