@@ -32,11 +32,38 @@ export const Projects = () => {
               <div className="tags">
                 <span>React</span>
                 <span>TypeScript</span>
+                <span>Node.js</span>
               </div>
               <div className="links">
                 <a href="https://encodeacademy.dev" target="_blank">
                   Live Demo <RxExternalLink />
                 </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project">
+            <Carousel
+              showArrows={true}
+              autoPlay={true}
+              infiniteLoop={true}
+              showThumbs={false}
+              showStatus={false}
+            >
+              <div>
+                <img src="./assets/img/projects/ut-1.png" />
+              </div>
+
+            </Carousel>
+            <div className="project__info">
+              <h4 className="project__name">Ultratech Online Platform</h4>
+              <p>
+              Ultratech Online Platform, your gateway to a seamless digital experience. Elevate your online presence with cutting-edge technologies, robust security features, and a user-friendly interface.
+              </p>
+              <div className="tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Tailwind</span>
               </div>
             </div>
           </div>
