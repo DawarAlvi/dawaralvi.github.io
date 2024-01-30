@@ -43,18 +43,9 @@ export const Projects = () => {
           </div>
 
           <div className="project">
-            <Carousel
-              showArrows={true}
-              autoPlay={true}
-              infiniteLoop={true}
-              showThumbs={false}
-              showStatus={false}
-            >
-              <div>
-                <img src="./assets/img/projects/ut-1.png" />
-              </div>
-
-            </Carousel>
+            <div className="carousel">
+              <img src="./assets/img/projects/ut-2.png" />
+            </div>
             <div className="project__info">
               <h4 className="project__name">Ultratech Online Platform</h4>
               <p>
