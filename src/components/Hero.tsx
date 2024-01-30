@@ -4,8 +4,10 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
-  SiPython,
   SiUnity,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 export const Hero = () => {
@@ -30,35 +32,22 @@ export const Hero = () => {
         </div>
         <div className="hero__blurb">
           Hi, I'm Dawar Alvi. A passionate Developer with expertise in making
-          interactive Web Apps and Realtime Graphics.
+          interactive Web Apps with MERN stack and Realtime Graphics.
         </div>
       </div>
       <div className="hero__stack">
+        <h2>My Tech Stack</h2>
         <div className="shrink-wrapper">
-          <span>
-            <SiHtml5 /> HTML
-          </span>
-          <span>
-            <SiCss3 /> CSS
-          </span>
-          <span>
-            <SiJavascript /> JavaScript
-          </span>
-          <span>
-            <SiTypescript /> TypeScript
-          </span>
-          <span>
-            <SiReact /> React
-          </span>
-          <span>
-            <SiPython /> Python
-          </span>
-          <span>
-            <TbBrandThreejs /> Three.Js
-          </span>
-          <span>
-            <SiUnity /> Unity
-          </span>
+          <span><SiHtml5 />HTML</span>
+          <span><SiCss3 />CSS</span>
+          <span><SiJavascript />JavaScript</span>
+          <span><SiTypescript />TypeScript</span>
+          <span><SiReact />React</span>
+          <span><SiNodedotjs />Node</span>
+          <span><SiExpress /> Express</span>
+          <span><SiMongodb /> MongoDB</span>
+          <span><TbBrandThreejs /> Three.Js</span>
+          <span><SiUnity /> Unity</span>
         </div>
       </div>
     </section>

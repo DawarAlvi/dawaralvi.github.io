@@ -145,11 +145,12 @@ nav {
     /* background-color: #a5f5; */
     flex-basis: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.hero__stack>div {
+.hero__stack>.shrink-wrapper {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -379,8 +380,9 @@ footer .wrapper {
         margin: 0 3rem;
     }
 
-    .hero__stack>div {
+    .hero__stack>.shrink-wrapper {
         gap: 1rem;
+        max-width: 50rem;
     }
 
 
