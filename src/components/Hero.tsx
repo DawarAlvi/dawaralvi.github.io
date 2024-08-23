@@ -4,11 +4,13 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
+  SiSolid,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
   SiPython,
   SiUnity,
+  SiGodotengine
 } from "react-icons/si";
 export const Hero = () => {
   return (
@@ -43,11 +45,13 @@ export const Hero = () => {
           <span><SiJavascript />JavaScript</span>
           <span><SiTypescript />TypeScript</span>
           <span><SiReact />React</span>
+          <span><SiSolid />Solid</span>
           <span><SiNodedotjs />Node</span>
-          <span><SiExpress /> Express</span>
-          <span><SiMongodb /> MongoDB</span>
-          <span><SiPython /> Python</span>
-          <span><SiUnity /> Unity</span>
+          <span><SiExpress />Express</span>
+          <span><SiMongodb />MongoDB</span>
+          <span><SiPython />Python</span>
+          <span><SiUnity />Unity</span>
+          <span><SiGodotengine />Godot</span>
         </div>
       </div>
     </section>
