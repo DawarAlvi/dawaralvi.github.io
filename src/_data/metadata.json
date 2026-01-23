@@ -1,0 +1,14 @@
+{
+	"url": "https://dawar.pages.dev",
+	"title": "Dawar Alvi",
+	"description": "This is where I share my musings, projects, and passions. Weaving together code, creativity, and curiosity",
+	"thumbnailUrl": "https://i.ibb.co/pyFFCfy/tn.png",
+	"thumbnailWidth": 1200,
+	"thumbnailHeight": 628,
+	"feed": {
+		"subtitle": "Dawar's posts about webdev, software, gamedev, art and writing",
+		"filename": "feed.xml",
+		"path": "/feed.xml",
+		"url": "https://dawar.pages.dev/feed.xml"
+	}
+}

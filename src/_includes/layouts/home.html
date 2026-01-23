@@ -1,0 +1,18 @@
+---
+layout: "layouts/base.html"
+---
+
+<section class="section-main">
+    {% include "partials/nav.html" %}
+
+    <div class="intro-text">{{ DATA.INTRO_TEXT }}</div>
+    <button class="intro-cta" onclick="handleExploreClick()">explore</button>
+</section>
+
+<section class="section-blog-list">
+    <h1 class="section-heading">From the blog</h1>
+
+    <div class="blog-list-none">Latest blog posts will appear here...</div>
+</section>
+
+{% include "partials/footer.html" %}

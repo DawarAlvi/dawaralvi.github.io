@@ -1,0 +1,30 @@
+<nav>
+    <div class="nav-items-left">
+    <button class="nav-item" onclick="toggleNavMenu(event)">
+        <i class="icon nav-icon" data-feather="menu"></i>
+    </button>
+    <button class="nav-item">
+        <i class="icon nav-icon light-theme-icon" onclick="handleThemeButtonClick()" data-feather="moon"></i>
+        <i class="icon nav-icon dark-theme-icon hidden" onclick="handleThemeButtonClick()" data-feather="sun"></i>
+    </button>
+    </div>
+    <a href="/" class="nav-items-center">
+    <div class="nav-branding">{{DATA.NAV_BRANDING}}</div>
+    </a>
+    <div class="nav-items-right">
+    <a href="{{DATA.LINK_GITHUB}}" target="_blank" class="nav-item">
+        <i class="icon nav-icon" data-feather="github"></i>
+    </a>
+    <a href="/feed.xml" target="_blank" class="nav-item">
+        <i class="icon nav-icon" data-feather="rss"></i>
+    </a>
+    </div>
+</nav>
+<div class="nav-menu" onclick="toggleNavMenu(event)">
+    <button onclick="toggleNavMenu(event)"><i class="icon" data-feather="x"></i></button>
+    <div class="nav-menu-items" onclick="event.stopPropagation()">
+        <a class="nav-menu-item" href="/">HOME</a>
+        <a class="nav-menu-item" href="/blog">BLOG</a>
+        <a class="nav-menu-item" href="/tags">TAGS</a>
+    </div>
+</div>

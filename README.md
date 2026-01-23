@@ -1,1 +1,0 @@
-# My personal website with blog and portfolio showcase

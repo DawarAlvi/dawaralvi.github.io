@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="{{metadata.title}}"/>
+    <meta property="og:description" content="{{metadata.description}}"/>
+    <meta property="og:url" content="{{metadata.url}}"/>
+    <meta property="og:image" content="{{metadata.thumbnailUrl}}"/>
+    <meta property="og:image:width" content="{{metadata.thumbnailWidth}}" />
+    <meta property="og:image:height" content="{{metadata.thumbnailHeight}}" />
+    <meta property="og:type" content="website"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style> {% include "css/index.njk" %} </style>
+
+    <title>{{metadata.title}}</title>
+</head>
+<body>
+    {{ content }}
+    
+    <!-- SCRIPTS -->
+    <script> {% include "js/index.js" %} </script>
+    <script> feather.replace(); </script>
+</body>
+</html>
