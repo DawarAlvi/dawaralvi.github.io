@@ -2,9 +2,23 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/public/": "/",
   });
-  
-  eleventyConfig.addTemplateFormats("mdx");
 
+  // Shortcodes
+  eleventyConfig.addShortcode("a", (text, url) =>
+    `<a href="${url}" target="_blank" rel="noopener noreferrer nofollow">${text}</a>`
+  );
+  eleventyConfig.addShortcode("yt", id => `
+    <div class="youtube-video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/${id}"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>`);
+  
   // Filters
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
@@ -26,7 +40,7 @@ export default async function (eleventyConfig) {
     const content = post.replace(/(<([^>]+)>)/gi, "");
     return content.substr(0, content.lastIndexOf(" ", length)) + "...";
   });
-  eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
     const date = new Date(dateObj);
     const formatted = date.toLocaleString('en-US', {
       month: 'short',
@@ -34,20 +48,20 @@ export default async function (eleventyConfig) {
     });
     return formatted;
   });
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+  eleventyConfig.addCollection("tagList", (collectionApi) => {
+    const tagsSet = new Set();
+    collectionApi.getAll().forEach((item) => {
+      if (item.data.tags) {
+        item.data.tags
+          .filter((tag) => !["blog", "all"].includes(tag))
+          .forEach((tag) => tagsSet.add(tag));
+      }
+    });
+    return Array.from(tagsSet).sort();
   });
-  eleventyConfig.addFilter("getAllTags", (collection) => {
-    let tagSet = new Set();
-    for (let item of collection) {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    }
-    return Array.from(tagSet);
-  });
-  eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
+  eleventyConfig.addFilter("filterTagList", tags => {
     return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts", "blog"].indexOf(tag) === -1
+      tag => ["all", "nav", "post", "posts", "blog"].indexOf(tag) === -1
     );
   });
   eleventyConfig.addFilter("hasPostTag", function hasPostTag(tags) {
@@ -67,7 +81,7 @@ export default async function (eleventyConfig) {
 		};
 	});
 
-	// When `eleventyExcludeFromCollections` is true, the file is not included in any collections
+	// When `eleventyExcludeFromCollections` is true, the file is not included in any collection
 	eleventyConfig.addGlobalData(
 		"eleventyComputed.eleventyExcludeFromCollections",
 		function () {

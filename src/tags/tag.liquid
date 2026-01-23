@@ -1,0 +1,19 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/simple.html
+eleventyComputed:
+  title: '{{ tag }}'
+permalink: /tags/{{ tag | slugify }}/
+---
+
+{% assign postslist = collections[ tag ] | reverse %}
+{% include "partials/posts-list.html" %}

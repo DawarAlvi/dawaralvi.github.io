@@ -1,8 +1,10 @@
 ---
 layout: "layouts/base.html"
 ---
+
 {% include "partials/nav.html" %}
-<div class="blog-wrapper">
+<div class="blog-parent">
+    <div class="blog-wrapper">
     <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
     <h1>{{title}}</h1>
     {% if image %}
@@ -11,5 +13,6 @@ layout: "layouts/base.html"
     {{content}}
     <br/>
     {% include "partials/post-tags.html" %}
+</div>
 </div>
 {% include "partials/footer.html" %}

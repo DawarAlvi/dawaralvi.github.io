@@ -159,6 +159,9 @@ nav {
     font-weight: 500;
     font-family: var(--type-display);
 }
+.section-heading > a:hover {
+    text-decoration: underline;
+}
 
 .blog-list-none {
     color: var(--color-muted-1);
@@ -201,9 +204,13 @@ nav {
 }
 
 /* BLOG POST */
+.blog-parent {
+    display:flex;
+}
 .blog-wrapper {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     max-width: 60rem;
     margin: auto;
     margin-top: 0;

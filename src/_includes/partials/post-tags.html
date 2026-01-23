@@ -1,16 +1,18 @@
 <div class="blog-list-tags">
-{%- if tags%} 
-    {%- for tag in tags | filterTagList %}
+{%- if tags %}
+    {%- assign filteredTags = tags | filterTagList -%}
+    {%- for tag in filteredTags %}
         <span class="blog-list-tag"><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></span>
     {%- endfor %}
-{%- elsif post.data.tags %}
-    {%- for tag in post.data.tags | filterTagList %}
+    {%- elsif post.data.tags %}
+    {%- assign filteredPostTags = post.data.tags | filterTagList -%}
+    {%- for tag in filteredPostTags %}
         <span class="blog-list-tag">{{tag}}</span>
     {%- endfor %}
 {%- else %}
-    {%- for tag in collections.all | getAllTags | filterTagList %}
+    {%- for tag in collections.tagList %}
         <div class="blog-list-tag"><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></div>
         <br/>
     {%- endfor %}
-{%- endif%}
+{%- endif %}
 </div>
