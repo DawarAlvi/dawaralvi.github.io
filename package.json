@@ -1,0 +1,24 @@
+{
+  "name": "dawaralvi.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawarAlvi/dawaralvi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DawarAlvi/dawaralvi.github.io/issues"
+  },
+  "homepage": "https://github.com/DawarAlvi/dawaralvi.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
