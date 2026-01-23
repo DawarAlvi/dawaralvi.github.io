@@ -41,8 +41,9 @@ jobs:
           git rm -rf .
 
           cp -r _site/* .
-          
-          git clean -fdx
+
+          rm -rf node_modules/
+          rm -rf _site/
 
           # Prevent Jekyll processing
           touch .nojekyll
