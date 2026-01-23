@@ -5,14 +5,36 @@ layout: "layouts/base.html"
 <section class="section-main">
     {% include "partials/nav.html" %}
 
+    <div class="tags-list">
+        {%- for tag in DATA.HOME_TAGS%}
+        <a href="/tags/{{tag | slugify}}">{{tag}}</a>
+        {%- endfor %}
+        <a href="/tags"class="tags-list-link">
+            <i class="icon tags-list-icon" data-feather="tag"></i>
+        </a>
+    </div>
+
+    <div class="hero-images">
+        <div class="hero-img hero-img-1"></div>
+        <div class="hero-img hero-img-2"></div>
+        <div class="hero-img hero-img-3"></div>
+    </div>
+
     <div class="intro-text">{{ DATA.INTRO_TEXT }}</div>
+
     <button class="intro-cta" onclick="handleExploreClick()">explore</button>
+
 </section>
 
 <section class="section-blog-list">
     <h1 class="section-heading">From the blog</h1>
 
+    {%- if not collections.blog %}
     <div class="blog-list-none">Latest blog posts will appear here...</div>
+    {%- else %}
+    {% assign postslist = collections.blog | reverse | limit:5 %}
+    {%- include "partials/posts-list.html" %}
+    {% endif %}
 </section>
 
 {% include "partials/footer.html" %}

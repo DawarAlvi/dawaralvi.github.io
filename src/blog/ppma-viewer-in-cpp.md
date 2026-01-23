@@ -4,7 +4,7 @@ tags:
     - technology
     - computer graphics
 date: 2024-07-02
-draft: true
+draft: false
 ---
 
 

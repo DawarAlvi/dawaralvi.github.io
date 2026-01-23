@@ -12,6 +12,9 @@ body {
     display: none;
 }
 
+.section-main {
+    min-height: 100vh;
+}
 
 .icon {
     stroke-width: 1;
@@ -145,13 +148,13 @@ nav {
 .section-blog-list {
     max-width: 60rem;
     width: 100%;
-    padding: 0 0.5rem;
-    margin: auto;
+    padding: 0 0 0.5 0rem;
+    margin: 0 auto;
 }
 
 .section-heading {
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     font-size: min(8vw, 3rem);
     font-weight: 500;
     font-family: var(--type-display);

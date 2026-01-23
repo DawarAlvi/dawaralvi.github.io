@@ -2,9 +2,9 @@
 <a href="{{post.url}}" class="blog-list-item">
     <div class="blog-list-top-row">
         <h2 class="blog-list-title">{{ post.data.title}}</h2>
-        <div class="blog-list-date">{{post.date}}</div>
+        <div class="blog-list-date">{{post.date | readableDate}}</div>
     </div>
-    <div class="blog-list-text">{{post.content}}</div>
+    <div class="blog-list-text">{{post.content | excerpt}}</div>
     {% include "partials/post-tags.html" %}
 </a>
 {% endfor %}

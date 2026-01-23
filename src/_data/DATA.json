@@ -1,5 +1,17 @@
 {
     "NAV_BRANDING": "Dawar Alvi",
+    "HERO_IMG_1": {
+        "file":"hero-img-1.png",
+        "attrib": "Philippe Mignot"
+    },
+    "HERO_IMG_2": {
+        "file":"hero-img-2.png",
+        "attrib": "Andrea Sonda"
+    },
+    "HERO_IMG_3": {
+        "file":"hero-img-3.png",
+        "attrib": "Hoach Le Dinh"
+    },
     "INTRO_TEXT": "I develop for the web, make games, create art and write stories.</br>Welcome to my cozy little corner of the internet.",
     "HOME_TAGS":[
         "webdev",

@@ -3,7 +3,7 @@ layout: "layouts/base.html"
 ---
 {% include "partials/nav.html" %}
 <div class="blog-wrapper">
-    <time datetime="{{ page.date }}">{{ page.date }}</time>
+    <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
     <h1>{{title}}</h1>
     {% if image %}
     <img src="/img/{{image}}">
