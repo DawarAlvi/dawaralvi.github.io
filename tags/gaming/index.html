@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:description" content="This is where I share my musings, projects, and passions. Weaving together code, creativity, and curiosity"/>
+    
+    <meta property="og:title" content="Dawar Alvi"/>
+    <meta name="description" content="This is where I share my musings, projects, and passions. Weaving together code, creativity, and curiosity">
+    <meta property="og:url" content="https://dawar.pages.dev"/>
+    <meta property="og:image" content="https://i.ibb.co/pyFFCfy/tn.png"/>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:type" content="website"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <script src="https://unpkg.com/feather-icons" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&family=Sacramento&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
+        as="style"
+        onload="this.rel='stylesheet'"
+    >
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&family=Sacramento&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap"
+            rel="stylesheet"
+        >
+    </noscript>
+
+    <style> 
+:root {
+    --color-bg: white;
+    --color-text: black;
+    --color-muted-1: #7e7e7e;
+    --color-muted-2: #ccc;
+    --color-link: #0d5aff;
+
+    --type-default: "Poppins", sans-serif;
+    --type-display: "Sacramento", serif;
+    --type-mono: "DM Mono", monospace;
+}
+
+:root[data-theme='dark'] {
+    --color-bg: black;
+    --color-text: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  min-width: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a, button {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+iframe {
+  height: 20rem;
+}
+body {
+    font-family: var(--type-default);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.section-main {
+    min-height: 100vh;
+}
+
+.icon {
+    stroke-width: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: clamp(3.5rem, 11vh, 8rem);
+    border-bottom: 1px solid var(--color-muted-2);
+}
+
+.nav-icon {
+    width: clamp(1.4rem, 3vw, 2rem);
+    height: clamp(1.4rem, 3vw, 2rem);
+}
+
+.nav-items-left,
+.nav-items-center,
+.nav-items-right {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-items-left .nav-item {
+    margin-left: min(3vw, 3rem);
+}
+
+.nav-items-right .nav-item {
+    margin-right: min(3vw, 3rem);
+}
+
+.nav-branding {
+    font-family: var(--type-display);
+    font-size: min(8vw, 2.813rem);
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.tags-list {
+    display: none;
+    line-height: 5rem;
+    font-family: var(--type-mono);
+    font-weight: 500;
+    text-transform: uppercase;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.tags-list>* {
+    margin: 0 2rem;
+    letter-spacing: 0.2rem;
+    color: var(--color-muted-1);
+    text-wrap: nowrap;
+}
+
+.tags-list-link {
+    position: absolute;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    border: 1px solid var(--color-text);
+    border-top: none;
+    border-right: none;
+}
+
+.tags-list-icon {
+    width: 2rem;
+    height: 2rem;
+    color: inherit;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center;
+    height: 38vh;
+}
+
+.hero-img {
+    background-size: cover;
+    flex-grow: 1;
+    max-width: 350px;
+    position: relative;
+}
+.hero-img-1 {
+    background: url("/img/hero-img-1.png") center center no-repeat;
+}
+.hero-img-2 {
+    background: url("/img/hero-img-2.png") center center no-repeat;
+}
+.hero-img-3 {
+    background: url("/img/hero-img-3.png") center center no-repeat;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    font-weight: 200;
+    margin: 4vh 0;
+}
+
+.intro-cta {
+    display: block;
+    margin: auto;
+    border: 2px solid var(--color-text);
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 1.4rem;
+    letter-spacing: 0.5rem;
+}
+
+.intro-cta:hover {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+}
+
+.section-blog-list {
+    max-width: 60rem;
+    width: 100%;
+    padding: 0 0 0.5 0rem;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-size: min(8vw, 3rem);
+    font-weight: 500;
+    font-family: var(--type-display);
+}
+.section-heading > a:hover {
+    text-decoration: underline;
+}
+
+.blog-list-none {
+    color: var(--color-muted-1);
+    text-align: center;
+}
+
+.blog-list-item {
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.blog-list-item:hover {
+    background-color: #aaa3;
+}
+
+.blog-list-top-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-list-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.blog-list-date {
+    color: var(--color-muted-1);
+    white-space: nowrap;
+}
+
+.blog-list-tags {
+    margin: 1rem 0;
+}
+
+.blog-list-tag {
+    color: var(--color-muted-1);
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* BLOG POST */
+.blog-parent {
+    display:flex;
+}
+.blog-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 0;
+    padding: 2rem 1rem;
+}
+
+.blog-wrapper time {
+    color: var(--color-muted-1);
+}
+
+.blog-wrapper h1 {
+    margin: .5rem 0;
+}
+
+.blog-wrapper p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.blog-wrapper p a {
+    color: var(--color-link);
+}
+
+.blog-wrapper img {
+    margin: 2rem auto;
+    background-color: var(--color-muted-2);
+}
+
+/* BLOG POST END */
+
+.simple-wrapper {
+    max-width: 75rem;
+    margin: auto;
+}
+
+.simple-wrapper>h1 {
+    text-align: center;
+}
+
+.youtube-video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.youtube-video-container::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+.youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--color-muted-2);
+    font-weight: 500;
+    margin-top: 5rem;
+}
+
+.footer-icon {
+    display: inline;
+    width: 1rem;
+    height: 1rem;
+    fill: #ff242f;
+    stroke: none;
+    position: relative;
+    top: 0.2rem;
+}
+
+.nav-menu {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #000b;
+    backdrop-filter: blur(5px);
+    transition: all .2s ease-in;
+}
+.show-nav-menu {
+    display: unset;
+}
+.fade-nav-menu {
+    opacity: 1;
+}
+
+.nav-menu-items {
+    position: absolute;
+    right: -30rem;
+    top: 0;
+    bottom: 0;
+    width: min(30rem, 100vw);
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    transition: all .2s ease-in;
+}
+.fade-nav-menu .nav-menu-items {
+    right:0;
+}
+.nav-menu button {
+    position: absolute;
+    top: 2rem;
+    right: min(3vw, 4rem);
+    width: 2rem;
+    height: 2rem;
+    z-index: 10000;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.nav-menu button .icon {
+    width: 100%;
+    height: 100%;
+}
+.nav-menu-item {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+html:has(.fade-nav-menu), body:has(.fade-nav-menu) { overflow: hidden }
+
+@media(min-width: 1145px) {
+    .tags-list {
+        display: flex;
+    }
+
+    .hero-images {
+        gap: 1rem;
+    }
+
+    .blog-list-top-row {
+        flex-direction: row;
+        place-items: center;
+    }
+}
+
+/* Landscape screens */
+@media(aspect-ratio > 1) {
+    .hero-images {
+        height: 50vh;
+    }
+}
+ </style>
+
+    <title>Dawar Alvi</title>
+</head>
+<body>
+    
+<nav>
+    <div class="nav-items-left">
+    <button class="nav-item" aria-label="Toggle theme">
+        <i class="icon nav-icon light-theme-icon" onclick="handleThemeButtonClick()" data-feather="moon"></i>
+        <i class="icon nav-icon dark-theme-icon hidden" onclick="handleThemeButtonClick()" data-feather="sun"></i>
+    </button>
+    </div>
+    <a href="/" class="nav-items-center">
+    <div class="nav-branding">Dawar Alvi</div>
+    </a>
+    <div class="nav-items-right">
+    <button class="nav-item" onclick="toggleNavMenu(event)" aria-label="Open navigation menu">
+        <i class="icon nav-icon" data-feather="menu"></i>
+    </button>
+    </div>
+</nav>
+<div class="nav-menu" onclick="toggleNavMenu(event)">
+    <button onclick="toggleNavMenu(event)" aria-label="Close navigation menu"><i class="icon" data-feather="x"></i></button>
+    <div class="nav-menu-items" onclick="event.stopPropagation()">
+        <a class="nav-menu-item" href="/">HOME</a>
+        <a class="nav-menu-item" href="/blog">BLOG</a>
+        <a class="nav-menu-item" href="/tags">TAGS</a>
+    </div>
+</div>
+<div class="simple-wrapper">
+    <h1>gaming</h1>
+    
+
+
+<a href="/blog/anomaly-mods/" class="blog-list-item">
+    <div class="blog-list-top-row">
+        <h2 class="blog-list-title">My personal S.T.A.L.K.E.R. Anomaly Mods List</h2>
+        <div class="blog-list-date">Apr 2025</div>
+    </div>
+    <div class="blog-list-text">
+
+
+Update Jan 2026: The original post was first written back in 2025. I've used this exact setup for...</div>
+    <div class="blog-list-tags">
+        <span class="blog-list-tag">gaming</span>
+</div>
+</a>
+
+
+</div>
+<footer>
+    <div>Made with <i class="footer-icon" data-feather="heart"></i> by Dawar Alvi</div>
+    <div>© 2024 - 2026</div>
+</footer>
+    
+    <!-- SCRIPTS -->
+    <script> function toggleNavMenu(e) {
+  e.stopPropagation();
+  const navMenu = document.querySelector(".nav-menu");
+  if (navMenu.classList.contains("fade-nav-menu")) {
+    navMenu.classList.toggle("fade-nav-menu");
+    setTimeout(() => {
+      navMenu.classList.toggle("show-nav-menu");
+    },200);
+  }
+  else {
+    navMenu.classList.toggle("show-nav-menu");
+    setTimeout(() => {
+      navMenu.classList.toggle("fade-nav-menu");
+    },0);
+  }
+}
+
+function handleExploreClick() {
+  document.querySelector(".section-blog-list")?.scrollIntoView?.();
+}
+
+function handleThemeButtonClick() {
+  const element = document.querySelector("html");
+  element.dataset.theme = element.dataset.theme === "dark" ? "light" : "dark";
+  setThemeIcons();
+  localStorage.setItem("theme", element.dataset.theme);
+}
+
+function setThemeIcons() {
+  if (document.querySelector("html").dataset.theme === "dark") {
+    document.querySelector(".light-theme-icon")?.classList.add("hidden");
+    document.querySelector(".dark-theme-icon")?.classList.remove("hidden");
+  }
+  else {
+    document.querySelector(".light-theme-icon")?.classList.remove("hidden");
+    document.querySelector(".dark-theme-icon")?.classList.add("hidden");
+  }
+}
+
+function initTheme() {
+    const localThemeValue = localStorage.getItem("theme");
+    if (localThemeValue) {
+      const element = document.querySelector("html");
+      element.dataset.theme = localThemeValue;
+      setThemeIcons();
+    }
+}
+
+function init() {
+  initTheme();
+}
+init();
+ </script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

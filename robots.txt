@@ -1,0 +1,23 @@
+# Block OpenAI / ChatGPT
+User-agent: GPTBot
+Disallow: /
+
+# Block Common Crawl (used by many LLMs)
+User-agent: CCBot
+Disallow: /
+
+# Block Anthropic / Claude
+User-agent: ClaudeBot
+Disallow: /
+
+# Block Google AI training (does NOT affect Google Search)
+User-agent: Google-Extended
+Disallow: /
+
+# Block Meta / Facebook AI
+User-agent: FacebookBot
+Disallow: /
+
+# Allow normal search engines
+User-agent: *
+Disallow:
