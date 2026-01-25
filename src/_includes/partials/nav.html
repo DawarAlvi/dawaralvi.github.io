@@ -9,13 +9,13 @@
     <div class="nav-branding">{{DATA.NAV_BRANDING}}</div>
     </a>
     <div class="nav-items-right">
-    <button class="nav-item" onclick="toggleNavMenu(event)">
+    <button class="nav-item" onclick="toggleNavMenu(event)" aria-label="Open navigation menu">
         <i class="icon nav-icon" data-feather="menu"></i>
     </button>
     </div>
 </nav>
 <div class="nav-menu" onclick="toggleNavMenu(event)">
-    <button onclick="toggleNavMenu(event)" aria-label="Open navigation menu"><i class="icon" data-feather="x"></i></button>
+    <button onclick="toggleNavMenu(event)" aria-label="Close navigation menu"><i class="icon" data-feather="x"></i></button>
     <div class="nav-menu-items" onclick="event.stopPropagation()">
         <a class="nav-menu-item" href="/">HOME</a>
         <a class="nav-menu-item" href="/blog">BLOG</a>
