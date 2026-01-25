@@ -313,7 +313,7 @@ footer {
 
 .nav-menu-items {
     position: absolute;
-    left: -30rem;
+    right: -30rem;
     top: 0;
     bottom: 0;
     width: min(30rem, 100vw);
@@ -325,12 +325,12 @@ footer {
     transition: all .2s ease-in;
 }
 .fade-nav-menu .nav-menu-items {
-    left:0;
+    right:0;
 }
 .nav-menu button {
     position: absolute;
-    top: 1.75rem;
-    left: 1rem;
+    top: 2rem;
+    right: min(3vw, 4rem);
     width: 2rem;
     height: 2rem;
     z-index: 10000;

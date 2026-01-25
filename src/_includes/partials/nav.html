@@ -1,8 +1,5 @@
 <nav>
     <div class="nav-items-left">
-    <button class="nav-item" onclick="toggleNavMenu(event)">
-        <i class="icon nav-icon" data-feather="menu"></i>
-    </button>
     <button class="nav-item">
         <i class="icon nav-icon light-theme-icon" onclick="handleThemeButtonClick()" data-feather="moon"></i>
         <i class="icon nav-icon dark-theme-icon hidden" onclick="handleThemeButtonClick()" data-feather="sun"></i>
@@ -12,12 +9,9 @@
     <div class="nav-branding">{{DATA.NAV_BRANDING}}</div>
     </a>
     <div class="nav-items-right">
-    <a href="{{DATA.LINK_GITHUB}}" target="_blank" class="nav-item">
-        <i class="icon nav-icon" data-feather="github"></i>
-    </a>
-    <a href="/feed.xml" target="_blank" class="nav-item">
-        <i class="icon nav-icon" data-feather="rss"></i>
-    </a>
+    <button class="nav-item" onclick="toggleNavMenu(event)">
+        <i class="icon nav-icon" data-feather="menu"></i>
+    </button>
     </div>
 </nav>
 <div class="nav-menu" onclick="toggleNavMenu(event)">
