@@ -8,5 +8,4 @@ draft: true
 ---
 
 While taking the raytracing in a weekend course I came across a simple image format known as PPMA.
-
-{% yt 'dQw4w9WgXcQ' %}
+{% a 'GitHub Project Link', 'https://github.com/DawarAlvi/PPMA-Image-Viewer' %}
