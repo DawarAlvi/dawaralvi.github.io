@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-items-left">
-    <button class="nav-item">
+    <button class="nav-item" aria-label="Toggle theme">
         <i class="icon nav-icon light-theme-icon" onclick="handleThemeButtonClick()" data-feather="moon"></i>
         <i class="icon nav-icon dark-theme-icon hidden" onclick="handleThemeButtonClick()" data-feather="sun"></i>
     </button>
@@ -15,7 +15,7 @@
     </div>
 </nav>
 <div class="nav-menu" onclick="toggleNavMenu(event)">
-    <button onclick="toggleNavMenu(event)"><i class="icon" data-feather="x"></i></button>
+    <button onclick="toggleNavMenu(event)" aria-label="Open navigation menu"><i class="icon" data-feather="x"></i></button>
     <div class="nav-menu-items" onclick="event.stopPropagation()">
         <a class="nav-menu-item" href="/">HOME</a>
         <a class="nav-menu-item" href="/blog">BLOG</a>

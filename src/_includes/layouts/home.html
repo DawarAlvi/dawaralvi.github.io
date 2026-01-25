@@ -2,8 +2,10 @@
 layout: "layouts/base.html"
 ---
 
-<section class="section-main">
-    {% include "partials/nav.html" %}
+<main class="section-main">
+    <header>
+        {% include "partials/nav.html" %}
+    </header>
 
     <div class="tags-list">
         {%- for tag in DATA.HOME_TAGS%}
@@ -24,7 +26,7 @@ layout: "layouts/base.html"
 
     <button class="intro-cta" onclick="handleExploreClick()">explore</button>
 
-</section>
+</main>
 
 <section class="section-blog-list">
     <h1 class="section-heading"><a href="blog">From the blog</a></h1>
