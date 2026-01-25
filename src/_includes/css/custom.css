@@ -170,8 +170,11 @@ nav {
 
 .blog-list-item {
     display: block;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     margin: 1rem 0;
+}
+.blog-list-item:hover {
+    background-color: #aaa3;
 }
 
 .blog-list-top-row {
