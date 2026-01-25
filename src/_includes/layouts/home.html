@@ -11,7 +11,7 @@ layout: "layouts/base.html"
         {%- for tag in DATA.HOME_TAGS%}
         <a href="/tags/{{tag | slugify}}">{{tag}}</a>
         {%- endfor %}
-        <a href="/tags"class="tags-list-link">
+        <a href="/tags" class="tags-list-link" aria-label="View all tags">
             <i class="icon tags-list-icon" data-feather="tag"></i>
         </a>
     </div>
