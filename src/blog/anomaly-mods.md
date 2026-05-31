@@ -9,7 +9,7 @@ date: 2025-04-24
 <hr />
 <br />
 
-<b>Update Jan 2026:</b> The original post was first written back in 2025. I've used this exact setup for almost a year, even finishing the game's campaign with it. But recently I've moved on to . The developer has done a fantastic job at optimizing the mod pack lately. And the entire reason I had to apply my own list of mods is mainly due to the fact that I was not able to run GAMMA on my crusty old laptop.
+<b>Update Jan 2026:</b> The original post was first written back in 2025. I've used this exact setup for almost a year, even finishing the game's campaign with it. But recently I've moved on to {% a 'GAMMA', 'https://www.stalkergamma.com/' %}. The developer has done a fantastic job at optimizing the mod pack lately. And the entire reason I had to apply my own list of mods is mainly due to the fact that I was not able to run GAMMA on my crusty old laptop.
 
 <hr />
 <br />
